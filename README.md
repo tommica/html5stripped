@@ -13,4 +13,8 @@ Grunt does expect you to have [sass](http://sass-lang.com/) installed.
 
 Of course you can just download this one and run:
 
-    rm package.json gruntfile.js && mkdir scss && printf "* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *behavior: url(boxsizing.htc); }\n" >> "scss/style.scss"
+    mkdir scss && printf "* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *behavior: url(boxsizing.htc); }\n" >> "scss/style.scss"
+    
+And if you don't want the npm & grunt stuff:
+
+    rm package.json gruntfile.js
