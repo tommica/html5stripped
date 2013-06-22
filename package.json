@@ -1,0 +1,21 @@
+{
+  "name": "html5stripped",
+  "version": "0.0.1",
+  "description": "A stripped down version of html5boilerplate",
+  "main": "gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tommica/html5stripped.git"
+  },
+  "author": "Tommi Carleman",
+  "license": "MIT",
+  "devDependencies": {
+  	"grunt": "~0.4.1",
+  	"grunt-contrib-concat": "~0.1.3",
+  	"grunt-contrib-watch": "~0.3.1",
+  	"grunt-contrib-uglify": "~0.2.0",
+  	"grunt-contrib-sass": "~0.3.0",
+  	"grunt-smushit": "~0.4.0"
+  },
+  "gitHead": "214489b6a401e6d54f3fe938cf87c8c9e48a99d8"
+}
