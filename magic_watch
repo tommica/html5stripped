@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# If user passes 1, then just compile, otherwise watch
+
+if hash compass 2>/dev/null; then
+  if [[ $# == 1 ]]; then
+    compass compile -e production --force
+  else
+    compass watch -e production --force
+  fi
+else
+  if [[ $# == 1 ]]; then
+    sass css/sass/xcombined.scss:css/style.css --style compressed
+  else
+    # No minification
+    #sass --watch css/sass/xcombined.scss:css/style.css --style expanded
+
+    sass --watch css/sass/xcombined.scss:css/style.css --style compressed
+  fi
+fi
+
+exit 0
