@@ -1,8 +1,14 @@
 #!/bin/sh
 
-# No minification
-#sass --watch sass/xcombined.scss:site.css --style expanded
+# If user passes 1, then just compile, otherwise watch
 
-sass --watch sass/xcombined.scss:site.css --style compressed
+if [[ $1 == 1 ]]; then
+  sass sass/xcombined.scss:site.css --style compressed
+else
+  # No minification
+  #sass --watch sass/xcombined.scss:site.css --style expanded
+
+  sass --watch sass/xcombined.scss:site.css --style compressed
+fi
 
 exit 0
