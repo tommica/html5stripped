@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # If user passes 1, then just compile, otherwise watch
 
