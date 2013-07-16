@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# No minification
+#sass --watch sass/xcombined.scss:site.css --style expanded
+
+sass --watch sass/xcombined.scss:site.css --style compressed
+
+exit 0
