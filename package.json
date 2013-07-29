@@ -1,0 +1,25 @@
+{
+  "name": "html5stripped",
+  "version": "0.0.1",
+  "description": "Boilerplate",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tommica/html5stripped"
+  },
+  "author": "Tommi Carleman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tommica/html5stripped/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-compass": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-imagemin": "~0.1.4",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-mkdir": "~0.1.1"
+  }
+}
