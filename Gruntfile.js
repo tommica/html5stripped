@@ -13,7 +13,8 @@ module.exports = function(grunt) {
         options: {
           config: 'config.rb',
           outputStyle: 'expanded',
-          force: true
+          force: true,
+          debugInfo: true
         }
       },
 
@@ -46,11 +47,11 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'images',
           src: '*.{png,jpg,jpeg}',
-          dest: 'release/iamges'
+          dest: 'release/images'
         }]
       }
     },
-
+    
     mkdir: {
       release: {
         options: {
@@ -59,18 +60,11 @@ module.exports = function(grunt) {
       }
     },
 
-    uglify: {
-      release: {
-        src: 'scripts/site.js',
-        dest: 'release/scripts/site.js'
-      }
-    },
-
     watch: {
       css: {
-        files: ['sass/*'],
+        files: ['sass/**'],
         tasks: ['compass:watch'],
-      },
+      }
     }
   });
 
@@ -79,12 +73,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-mkdir');
 
   // Set Tasks
   grunt.registerTask('default', []);
   grunt.registerTask('wc', ['watch:css']);
-  grunt.registerTask('release', ['mkdir:release', 'clean:release', 'compass:release', 'copy:release', 'imagemin:release', 'uglify:release', 'compass:watch']); 
+  grunt.registerTask('release', ['mkdir:release', 'clean:release', 'compass:release', 'copy:release', 'imagemin:release', 'compass:watch']); 
 };
