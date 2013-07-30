@@ -21,8 +21,9 @@ module.exports = function(grunt) {
       release: {
         options: {
           config: 'config.rb',
-          outputStyle: 'compressed',
-          force: true
+          outputStyle: 'compact',
+          force: true,
+          noLineComments: true
         }
       }
     },
@@ -79,5 +80,5 @@ module.exports = function(grunt) {
   // Set Tasks
   grunt.registerTask('default', []);
   grunt.registerTask('wc', ['watch:css']);
-  grunt.registerTask('release', ['mkdir:release', 'clean:release', 'compass:release', 'copy:release', 'imagemin:release', 'compass:watch']); 
+  grunt.registerTask('release', ['mkdir:release', 'clean:release', 'compass:release', 'copy:release', 'imagemin:release', 'compass:release']); 
 };
