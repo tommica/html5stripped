@@ -5,7 +5,8 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     clean: {
-      release: ['release']
+      "del-release": ['release'],
+      "release": ['release/css/smacss', 'release/css/bootstrap']
     },
 
     compass: {
@@ -80,5 +81,5 @@ module.exports = function(grunt) {
   // Set Tasks
   grunt.registerTask('default', []);
   grunt.registerTask('wc', ['watch:css']);
-  grunt.registerTask('release', ['mkdir:release', 'clean:release', 'compass:release', 'copy:release', 'imagemin:release', 'compass:watch']); // Compass watch in the end is there just to restore the dev version of the css
+  grunt.registerTask('release', ['mkdir:release', 'clean:del-release', 'compass:release', 'copy:release', 'clean:release', 'imagemin:release', 'compass:watch']); // Compass watch in the end is there just to restore the dev version of the css
 };
