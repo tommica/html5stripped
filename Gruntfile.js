@@ -54,6 +54,13 @@ module.exports = function(grunt) {
       }
     },
     
+    ender: {
+      options: {
+        output: "scripts/vendor/ender",
+        dependencies: ["jeesh"]
+      }
+    }
+    
     mkdir: {
       release: {
         options: {
@@ -76,10 +83,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-ender');
   grunt.loadNpmTasks('grunt-mkdir');
 
   // Set Tasks
   grunt.registerTask('default', []);
+  grunt.registerTask('init', ['ender', 'compass:watch']);
   grunt.registerTask('wc', ['watch:css']);
-  grunt.registerTask('release', ['mkdir:release', 'clean:del-release', 'compass:release', 'copy:release', 'clean:release', 'imagemin:release', 'compass:watch']); // Compass watch in the end is there just to restore the dev version of the css
+  grunt.registerTask('release', ['ender', 'mkdir:release', 'clean:del-release', 'compass:release', 'copy:release', 'clean:release', 'imagemin:release', 'compass:watch']); // Compass watch in the end is there just to restore the dev version of the css
 };
