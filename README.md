@@ -7,7 +7,7 @@ I removed some things that I thought we're unnecessary.
 
 --
 
-    npm install
+    npm install && grunt init
     
 ## Grunt tasks ##
 
