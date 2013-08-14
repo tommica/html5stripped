@@ -59,7 +59,7 @@ module.exports = function(grunt) {
         output: "scripts/vendor/ender",
         dependencies: ["jeesh"]
       }
-    }
+    },
     
     mkdir: {
       release: {
