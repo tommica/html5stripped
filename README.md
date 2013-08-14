@@ -5,11 +5,6 @@
 
 I removed some things that I thought we're unnecessary.
 
-
-    sass --style compressed css/sass/xcombined.scss:css/site.css
-
-    sass --style compressed --watch css/sass/xcombined.scss:css/site.css
-
 --
 
     npm install
