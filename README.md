@@ -1,5 +1,13 @@
+#IMPORTANT!#
+
+This is now obsolete, please use
+https://github.com/tommica/webapptemplate
+
+
+
+
 #html5stripped#
-=============
+===============
 
 ## This is a stripped down version of html5boilerplate. ##
 
